@@ -1,0 +1,59 @@
+.content {
+  display: grid;
+  grid-template-areas:
+    "img img img img img"
+    "ava bio bio bio bio"
+    "post post post post post";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto;
+}
+
+.hat {
+  width: 100%;
+  grid-area: img;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.avatar {
+  grid-area: ava;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.bio {
+  grid-area: bio;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "name name name name name name"
+    "desc desc desc desc desc desc"
+  ;
+}
+
+.post {
+  grid-area: post;
+  padding-bottom: 10px;
+}
+
+.name {
+  grid-area: name;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.description {
+  grid-area: desc;
+  font-size: 17px;
+}
+
+.avatar img {
+  display: flex;
+  width: 100%;
+  /* justify-content: center; */
+  /* align-items: center; */
+  border-radius: 40px;
+}

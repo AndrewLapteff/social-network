@@ -1,0 +1,30 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.app-wrapper {
+  display: grid;
+  width: 97%;
+  margin: auto;
+  grid-template-areas:
+    "hd hd"
+    "nv cnt"
+  ;
+  grid-template-rows: 120px 1fr;
+  grid-template-columns: 1.6fr 11.4fr;
+  grid-gap: 10px;
+  min-height: 100vh;
+  padding-bottom: 5px;
+}
+
+.app-content {
+  grid-area: cnt;
+  background-color: #1F8A70;
+  color: #fff;
+  border-radius: 10px;
+}

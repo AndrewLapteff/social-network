@@ -1,0 +1,26 @@
+.post {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.textarea {
+    padding-left: 8px;
+}
+
+.users_avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+}
+
+.msg {
+    padding-left: 5px;
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.nickname {
+    padding-top: 3px;
+    margin: 2px;
+    font-size: 18px;
+}

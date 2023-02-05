@@ -1,0 +1,22 @@
+.nav {
+  grid-area: nv;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #BFDB38;
+  border-radius: 10px;
+}
+
+.nav div {
+  padding: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: rgb(255, 255, 255);
+}
