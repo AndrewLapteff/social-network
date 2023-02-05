@@ -3,6 +3,7 @@ import NavCSS from "./Nav.module.css";
 
 const activeStyle = {
   color: "white",
+  fontSize: "110%",
 };
 
 export function Nav() {

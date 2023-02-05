@@ -2,7 +2,7 @@
     display: grid;
     grid-template-areas:
         "header header"
-        "item textt";
+        "items textt";
     grid-template-columns: 2fr 7fr;
     grid-template-rows: 1fr 11fr;
 
@@ -17,10 +17,23 @@
     font-size: 30px;
 }
 
+.chat_items {
+    grid-area: items;
+}
+
 .chat_item {
-    grid-area: item;
+    padding-top: 20px;
 }
 
 .text_area {
     grid-area: textt;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.msg {
+    padding-top: 10px;
 }
