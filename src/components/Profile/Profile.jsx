@@ -2,7 +2,7 @@ import ProfileCSS from "./Profile.module.css";
 import ava from "../../img/avatar.png";
 import { Posts } from "./Posts/Posts";
 
-export function Profile() {
+export function Profile(props) {
   return (
     <div className={ProfileCSS.content}>
       <img
@@ -19,7 +19,7 @@ export function Profile() {
         </div>
         <div className={ProfileCSS.description}>Description</div>
       </div>
-      <Posts></Posts>
+      <Posts state={props.state.postsData}></Posts>
     </div>
   );
 }

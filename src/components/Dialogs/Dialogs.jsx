@@ -1,49 +1,30 @@
-import { NavLink } from "react-router-dom";
+import { DialogItem } from "./DialogsItem/DialogItem";
 import DialogsCSS from "./Dialogs.module.css";
-
-function DialogItem(props) {
-  let path = "/dialogs/" + props.id; //! path constructor
-  return (
-    <div className={DialogsCSS.chat_item}>
-      <NavLink to={path} className={DialogsCSS.link}>
-        {props.name}
-      </NavLink>
-    </div>
-  );
-}
-
-function Text(props) {
-  return <div className={DialogsCSS.msg}>{props.text}</div>;
-}
-
-//! цього тут не повинно бути, просто для наглядності
-let usersDATA = [
-  { name: "Bogdan", id: 1 },
-  { name: "Kostya", id: 2 },
-  { name: "Artems", id: 3 },
-  { name: "Denis", id: 4 },
-];
-
-//! приклад обробки данних які "приходять" 
-let users = usersDATA.map((user) => {
-  return <DialogItem name={user.name} id={user.id} />;
-});
-
-//! цього тут не повинно бути, просто для наглядності
-let messagesDATA = [
-  { message: "Hay, greate acc", id: 1 },
-  { message: "Can you give me ur password?", id: 1 },
-  { message: "I`m Artems", id: 3 },
-];
+import { Text } from "./Text/Text";
 
 export const Dialogs = (props) => {
+  //? те шо і на 24 строкі
+  // let messages = props.msg.map((msg) => {
+  //   return <Text text={msg.message} />;
+  // });
+  //? те шо і на 20 строкі
+  // let users = props.userList.map((user) => {
+  //   return <DialogItem name={user.name} id={user.id} />;
+  // });
+
   return (
     <div className={DialogsCSS.dialogs_wrapper}>
       <p className={DialogsCSS.header}>Dialogs</p>
-      <div className={DialogsCSS.chat_items}>{users}</div>
+      <div>{props.state.usersListInChat.name}</div>
+      <div className={DialogsCSS.chat_items}>
+        {props.state.usersListInChat.map((user, i) => (
+          <DialogItem key={i} name={user.name} id={user.id} />
+        ))}
+      </div>
       <div className={DialogsCSS.text_area}>
-        <Text text={messagesDATA[0].message} /> //! map needed
-        <Text text={messagesDATA[1].message} />
+        {props.state.messagesData.map((msg, i) => (
+          <Text key={i} text={msg.message} />
+        ))}
       </div>
     </div>
   );
