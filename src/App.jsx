@@ -1,5 +1,4 @@
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Nav } from "./components/Nav/Nav";
@@ -14,15 +13,30 @@ function App(props) {
         <Routes>
           <Route
             path="/"
-            element={<Profile state={props.state.profilePage} />}
+            element={
+              <Profile
+                state={props.store.state.profilePage}
+                dispatch={props.store.dispatch}
+              />
+            }
           />
           <Route
             path="/profile"
-            element={<Profile state={props.state.profilePage} />}
+            element={
+              <Profile
+                state={props.store.state.profilePage}
+                dispatch={props.store.dispatch}
+              />
+            }
           />
           <Route
             path="/dialogs"
-            element={<Dialogs state={props.state.dialogsPage} />}
+            element={
+              <Dialogs
+                state={props.store.state.dialogsPage}
+                dispatch={props.store.dispatch}
+              />
+            }
           />
         </Routes>
       </div>

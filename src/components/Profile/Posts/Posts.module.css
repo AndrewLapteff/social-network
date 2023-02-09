@@ -1,3 +1,26 @@
 .post {
     padding-left: 20px;
 }
+
+.textarea {
+    background-color: #254b0a48;
+    width: 97%;
+    border-radius: 10px;
+    resize: none;
+    color: white;
+    padding: 10px;
+}
+
+.post_button {
+    background-color: #efd726d5;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+
+.button_wrapper {
+    width: 98%;
+    display: flex;
+    justify-content: flex-end;
+}

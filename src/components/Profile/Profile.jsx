@@ -19,7 +19,7 @@ export function Profile(props) {
         </div>
         <div className={ProfileCSS.description}>Description</div>
       </div>
-      <Posts state={props.state.postsData}></Posts>
+      <Posts state={props.state.postsData} dispatch={props.dispatch}></Posts>
     </div>
   );
 }
