@@ -4,6 +4,7 @@ import { Header } from "./components/Header/Header";
 import { Nav } from "./components/Nav/Nav";
 import { Profile } from "./components/Profile/Profile";
 import { Dialogs } from "./components/Dialogs/Dialogs";
+import { Users } from "./components/Users/Users";
 function App(props) {
   return (
     <div className="app-wrapper">
@@ -11,33 +12,10 @@ function App(props) {
       <Nav />
       <div className="app-content">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Profile
-                state={props.store.state.profilePage}
-                dispatch={props.store.dispatch}
-              />
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              <Profile
-                state={props.store.state.profilePage}
-                dispatch={props.store.dispatch}
-              />
-            }
-          />
-          <Route
-            path="/dialogs"
-            element={
-              <Dialogs
-                state={props.store.state.dialogsPage}
-                dispatch={props.store.dispatch}
-              />
-            }
-          />
+          <Route path="/" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/dialogs" element={<Dialogs />} />
+          <Route path="/users" element={<Users />} />
         </Routes>
       </div>
     </div>
